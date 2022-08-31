@@ -14,10 +14,37 @@
 	<AutoCommandBar name="FormCommandBar" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
 	<ChildItems>
+		<LabelField name="Discount" id="3">
+			<DataPath>Discount</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>NZ=Простите.....; NF='Последний шанс купить по скидке: N секунд'</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>NZ=Sorry......; NF='Last attempt to get a discount: N seconds'</v8:content>
+				</v8:item>
+			</Format>
+			<TextColor>#FF0000</TextColor>
+			<ContextMenu name="DiscountContextMenu" id="4"/>
+			<ExtendedTooltip name="DiscountExtendedTooltip" id="5"/>
+		</LabelField>
 		<Button name="BuyNow" id="1">
 			<Type>UsualButton</Type>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
 			<CommandName>Form.Command.BuyNow</CommandName>
+			<BackColor>style:FieldAlternativeBackColor</BackColor>
 			<Font ref="style:NormalTextFont" height="20" kind="StyleItem"/>
 			<ExtendedTooltip name="BuyNowExtendedTooltip" id="2"/>
 		</Button>
@@ -28,6 +55,26 @@
 				<v8:Type>cfg:ExternalDataProcessorObject.Banner</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Discount" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Discount</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
