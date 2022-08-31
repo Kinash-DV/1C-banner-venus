@@ -19,7 +19,7 @@
 		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
 	</Events>
 	<ChildItems>
-		<LabelField name="Discount" id="3">
+		<LabelField name="Discount" id="6">
 			<DataPath>Discount</DataPath>
 			<TitleLocation>None</TitleLocation>
 			<HorizontalAlign>Center</HorizontalAlign>
@@ -36,10 +36,10 @@
 				</v8:item>
 			</Format>
 			<TextColor>#FF0000</TextColor>
-			<ContextMenu name="DiscountContextMenu" id="4"/>
-			<ExtendedTooltip name="DiscountExtendedTooltip" id="5"/>
+			<ContextMenu name="DiscountContextMenu" id="7"/>
+			<ExtendedTooltip name="DiscountExtendedTooltip" id="8"/>
 		</LabelField>
-		<InputField name="PromoCode" id="4">
+		<InputField name="PromoCode" id="3">
 			<DataPath>PromoCode</DataPath>
 			<Title>
 				<v8:item>
@@ -51,6 +51,8 @@
 					<v8:content>Enter your promo code</v8:content>
 				</v8:item>
 			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
 			<ContextMenu name="PromoCodeContextMenu" id="4"/>
 			<ExtendedTooltip name="PromoCodeExtendedTooltip" id="5"/>
 		</InputField>
