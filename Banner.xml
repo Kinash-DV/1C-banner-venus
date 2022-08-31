@@ -24,9 +24,11 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<DefaultForm/>
+			<DefaultForm>ExternalDataProcessor.Banner.Form.Form</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Form>Form</Form>
+		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>
